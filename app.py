@@ -57,7 +57,7 @@ else:
 retriever = vectorstore.as_retriever()
 
 template = """Eres un asistente para contestar preguntas del usuario sobre ciruitos eléctricos. 
-    Contesta siempre en español y agradece el usuario por preguntar. Si las preguntas son sobre otro tema, contesta que no puedes contestar.
+    Contesta siempre en español y agradece al usuario por preguntar. Si las preguntas son sobre otro tema, contesta que no puedes contestar.
     {context}
     Question: {question}
     Helpful Answer:"""
