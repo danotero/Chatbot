@@ -1,12 +1,13 @@
+import atexit
+import os
+import pdfplumber
+import streamlit as st
 from PyPDF2 import PdfReader
 from langchain.text_splitter import CharacterTextSplitter, RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import DocArrayInMemorySearch
 from langchain_community.document_loaders import TextLoader, PyPDFLoader
 from langchain_community.vectorstores import FAISS
 from langchain_experimental.text_splitter import SemanticChunker
-import os
-import streamlit as st
-import pdfplumber
 from langchain_community.embeddings import OllamaEmbeddings
 from langchain_community.embeddings import HuggingFaceInstructEmbeddings
 from InstructorEmbedding import INSTRUCTOR
@@ -21,7 +22,6 @@ from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
 from langchain_groq import ChatGroq
 from htmlTemplates import user_template, bot_template
-import atexit
 
 api_key= os.environ['MY_ENV_VAR']
 model_name = 'llama-3.3-70b-versatile'
