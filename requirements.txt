@@ -12,6 +12,7 @@ langgraph-checkpoint
 langgraph-sdk
 langsmith
 ollama
+python-dotenv
 pdfplumber
 PyPDF2
 streamlit

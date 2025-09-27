@@ -21,9 +21,12 @@ from langchain_core.prompts import PromptTemplate
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
 from langchain_groq import ChatGroq
+from dotenv import load_dotenv
 from htmlTemplates import user_template, bot_template
 
-api_key= os.environ['MY_ENV_VAR']
+load_dotenv()
+
+api_key= os.getenv('GROQ_API_KEY')
 model_name = 'llama-3.3-70b-versatile'
 
 groq_chat = ChatGroq(groq_api_key=api_key, model_name=model_name)
