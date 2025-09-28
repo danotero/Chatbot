@@ -9,7 +9,7 @@ from langchain_community.document_loaders import TextLoader, PyPDFLoader
 from langchain_community.vectorstores import FAISS
 from langchain_experimental.text_splitter import SemanticChunker
 from langchain_community.embeddings import OllamaEmbeddings
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from InstructorEmbedding import INSTRUCTOR
 from langchain_core.messages import HumanMessage, SystemMessage
 from langchain_ollama import ChatOllama
