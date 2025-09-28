@@ -46,7 +46,7 @@ def load_db(embeddings,pdf_path):
     vectorstore = FAISS.from_texts(docs, embeddings)
     return vectorstore
 
-embeddings = HuggingFaceInstructEmbeddings(model_name='hkunlp/instructor-xl')
+embeddings = HuggingFaceInstructEmbeddings(model_name='hkunlp/instructor-large')
 
 pdf_path = "Serway.pdf"
 
