@@ -9,7 +9,7 @@ from langchain_community.document_loaders import TextLoader, PyPDFLoader
 from langchain_community.vectorstores import FAISS
 from langchain_experimental.text_splitter import SemanticChunker
 from langchain_community.embeddings import OllamaEmbeddings
-from langchain_community.embeddings import HuggingFaceInstructEmbeddings
+from langchain_community.embeddings import HuggingFaceEmbeddings
 from InstructorEmbedding import INSTRUCTOR
 from langchain_core.messages import HumanMessage, SystemMessage
 from langchain_ollama import ChatOllama
@@ -46,7 +46,7 @@ def load_db(embeddings,pdf_path):
     vectorstore = FAISS.from_texts(docs, embeddings)
     return vectorstore
 
-embeddings = HuggingFaceInstructEmbeddings(model_name='hkunlp/instructor-large')
+embeddings = HuggingFaceEmbeddings(model_name='hkunlp/instructor-large')
 
 pdf_path = "Serway.pdf"
 
