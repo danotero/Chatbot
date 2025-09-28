@@ -2,6 +2,7 @@ import atexit
 import os
 import pdfplumber
 import streamlit as st
+import langchain.globals
 from PyPDF2 import PdfReader
 from langchain.text_splitter import CharacterTextSplitter, RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import DocArrayInMemorySearch
@@ -24,6 +25,7 @@ from langchain_groq import ChatGroq
 from dotenv import load_dotenv
 from htmlTemplates import user_template, bot_template
 
+langchain.globals.set_verbose(True)
 load_dotenv()
 
 api_key= os.getenv('GROQ_API_KEY')
